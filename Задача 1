@@ -1,0 +1,56 @@
+# PR1_Zubareva_lab_rab_1
+<!DOCTYPE HTML>
+<html>
+<head> 
+<title>Задание 35</title> 
+</head>
+<body>
+
+<script>
+
+function task1()
+{  
+var x = prompt('Введите x', ''); 
+var y = prompt('Введите y', '');
+var z = prompt('Введите z', '');
+var res; var inf; 
+if ((+x + +y + +z)>(x*y*z))
+{ res = (+x + +y + +z);
+  inf = 'Сумма чисел превышает их произведение.';
+}
+ else
+{ res = (x*y*z);
+  inf = 'Произведение чисел превышает их сумму.';
+}
+var max;
+document.write("<p>Максимальное число: "); 
+max = res; 
+document.write(res + "</p>"); 
+document.write(inf);
+}
+
+function task2()
+{
+var x = prompt('Введите x', ''); 
+var y = prompt('Введите y', '');
+var z = prompt('Введите z', '');
+var min; var inf; 
+if ((+x + +y + +(z/2))<(x*y*z))
+{ min = (+x + +y + +(z/2)) ;
+  inf = 'Сумма чисел меньше, чем их произведение.';
+}
+ else
+{ min = (x*y*z);
+  inf = 'Произведение чисел меньше, чем их сумма.';
+}
+var result;
+document.write("<p>Окончательный результат: "); 
+result = min*min + +1; 
+document.write(result + "</p>"); 
+document.write(inf);
+}
+</script>
+<button onclick="task1()">А</button>
+<button onclick="task2()">Б</button>
+</body>
+</html>
