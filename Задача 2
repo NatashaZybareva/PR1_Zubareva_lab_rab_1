@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+<title>Задание 104</title> 
+</head>
+<body>
+<script>
+var a = prompt('Введите a', '');
+var n = prompt('Введите количество членов последовательности', '');
+var min;var xo;
+
+if (a>0 && a <= 1)
+{
+  
+   if (2*a<0.95)
+     { 
+       min = 2*a;
+     }
+   else
+     { 
+       min = (0.95);
+     }
+xo = min;
+ 
+}
+else if (a>1 && a<=25)
+{
+  xo = a/5
+}
+else if(a>25)
+{
+  xo = a/25;
+}
+else
+{
+alert('Введите положительное число!')
+}
+document.write(xo+";","");
+
+var i=0;var x1=0;
+var isfirst = 1;
+while(i<n)
+{
+x1 =a/5*xo+4/(5*Math.pow(xo,4));
+document.write(x1+";","");
+i++;
+xo=x1;
+  if(5/4*a*Math.abs(x1-xo)<Math.pow(10,-6))
+     {
+if(isfirst == 1)
+  {     
+     var first = x1;
+     isfirst = 0; 
+  }     
+     }
+
+}
+document.write("<br>" +'Первый Xn:'+first);
+
+var x2 = a - Math.pow(first,5);
+document.write("<br>"+'Разность:' +x2);
+
+</script>
+</body>
+</html>
